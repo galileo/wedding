@@ -4,7 +4,7 @@
 -
   id: 1
   name: "Małgorzta Juszczyk"
-  placement: 1
+  placement: 2
   transport_before: 0
   transport_after: 0
   accommodation: 0
@@ -20,6 +20,7 @@
   accommodation: 0
   price_range: 1
   side: "kamil"
+  next_day: 1
 -
   id: 3
   name: "Monika Juszczyk"
@@ -29,6 +30,7 @@
   accommodation: 0
   price_range: 1
   side: "monika"
+  next_day: 1
 -
   id: 4
   name: "Andrzej Juszczyk"
@@ -38,30 +40,33 @@
   accommodation: 0
   price_range: 1
   side: "monika"
+  next_day: 1
 -
   id: 5
   name: "Aniela Ronewicz"
   placement: 2
-  transport_before: 0
-  transport_after: 0
+  transport_before: 1
+  transport_after: 1
   accommodation: 1
   price_range: 1
   side: "kamil"
+  next_day: 1
 -
   id: 6
   name: "Marian Kudlek"
   placement: 2
-  transport_before: 0
-  transport_after: 0
+  transport_before: 1
+  transport_after: 1
   accommodation: 1
   price_range: 1
   side: "kamil"
+  next_day: 1
 -
   id: 7
   name: "Marian Mikosch"
   placement: 2
-  transport_before: 0
-  transport_after: 0
+  transport_before: 1
+  transport_after: 1
   accommodation: 1
   price_range: 1
   side: "kamil"
@@ -71,7 +76,7 @@
   name: "Karina Kuwaczka"
   placement: 2
   transport_before: 1
-  transport_after: 0
+  transport_after: 1
   accommodation: 1
   price_range: 1
   side: "kamil"
@@ -174,7 +179,7 @@
   next_day: 1
 -
   id: 25
-  name: "Osoba tow. Kacpra, Natalia ..."
+  name: "Natalia Bilnik"
   placement: 1
   transport_before: 0
   transport_after: 0
@@ -232,7 +237,7 @@
   next_day: 1
 -
   id: 32
-  name: "Klaudia Kamiński"
+  name: "Klaudia Kamińska"
   placement: 1
   transport_before: 0
   transport_after: 1
@@ -241,7 +246,7 @@
   side: "monika"
 -
   id: 33
-  name: "Os. tow. Klaudii Kamińskiej"
+  name: "Dawid Bęben"
   placement: 1
   transport_before: 0
   transport_after: 1
@@ -380,16 +385,6 @@
   side: "monika"
   next_day: 1
 -
-  id: 47
-  name: "Filip Wnuk"
-  placement: 2
-  transport_before: 0
-  transport_after: 0
-  accommodation: 1
-  price_range: 1
-  side: "monika"
-  next_day: 1
--
   id: 48
   name: "Władysława Popik"
   placement: 2
@@ -431,7 +426,7 @@
   next_day: 1
 -
   id: 52
-  name: "Mateusz Popik"
+  name: "Mateusz Popik (Edyta, Krzysztof)"
   placement: 2
   transport_before: 0
   transport_after: 1
@@ -441,7 +436,7 @@
   next_day: 1
 -
   id: 53
-  name: "Maciek Popik"
+  name: "Maciek Popik (Edyta, Krzysztof)"
   placement: 2
   transport_before: 0
   transport_after: 1
@@ -582,7 +577,7 @@
   transport_before: 0
   transport_after: 1
   accommodation: 0
-  price_range: 2
+  price_range: 3
   side: "monika"
   next_day: 1
 -
@@ -597,7 +592,7 @@
   next_day: 1
 -
   id: 69
-  name: "Marek Kokosińska"
+  name: "Marek Kokosiński"
   placement: 2
   transport_before: 0
   transport_after: 1
@@ -631,7 +626,7 @@
   placement: 2
   transport_before: 0
   transport_after: 1
-  accommodation: 0
+  accommodation: 1
   price_range: 1
   side: "monika"
   next_day: 1
@@ -639,6 +634,266 @@
   id: 73
   name: "Marcin Sikora"
   placement: 1
+  transport_before: 1
+  transport_after: 1
+  price_range: 1
+  side: "monika"
+-
+  id: 74
+  name: "Sabina Kloza"
+  placement: 2
+  transport_before: 1
+  transport_after: 1
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 75
+  name: "Bernard Kloza"
+  placement: 2
+  transport_before: 1
+  transport_after: 1
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 76
+  name: "Danuta Boguszewska"
+  placement: 2
+  transport_before: 1
+  transport_after: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 77
+  name: "Stefan Boguszewski"
+  placement: 2
+  transport_before: 1
+  transport_after: 0
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 78
+  name: "Michał Organek"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "kamil"
+-
+  id: 79
+  name: "Katarzyna Klabuhn"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  price_range: 1
+  side: "monika"
+-
+  id: 80
+  name: "Marta Bartosik"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 81
+  name: "Roksana Mazur"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 82
+  name: "Os. Tow. Roksana Mazur"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 83
+  name: "Justyna Białek"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 84
+  name: "Michał Białek"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 85
+  name: "Ewelina Małecka"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 86
+  name: "Piotr Małecki"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 87
+  name: "Wiktor Małecki"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 2
+  side: "monika"
+  next_day: 1
+-
+  id: 88
+  name: "Przemysła Miarczyński"
+  placement: 1
+  transport_before: 1
+  transport_after: 1
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 89
+  name: "Agnieszka Płusa"
+  placement: 1
+  transport_before: 1
+  transport_after: 1
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 90
+  name: "Natalia Kolińska"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 91
+  name: "Piotr Pasich"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 92
+  name: "Daniel Noworyta"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 93
+  name: "Katarzyna Noworyta"
+  placement: 1
+  transport_before: 1
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 94
+  name: "Krzysztof Noworyta"
+  placement: 1
+  transport_before: 1
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "kamil"
+-
+  id: 95
+  name: "Justyna Noworyta"
+  placement: 1
+  transport_before: 1
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "kamil"
+-
+  id: 96
+  name: "Wioleta Nowak"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 97
+  name: "Adam Nowak"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 98
+  name: "Tomasz Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  price_range: 1
+  side: "monika"
+-
+  id: 99
+  name: "Agnieszka Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  price_range: 1
+  side: "monika"
+-
+  id: 100
+  name: "Grzegorz Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  price_range: 1
+  side: "monika"
+-
+  id: 101
+  name: "Beata Wnuk"
+  placement: 2
   transport_before: 0
   transport_after: 1
   price_range: 1
