@@ -10,6 +10,7 @@ services:
       - logvolume01:/var/log
     links:
       - relation_database
+      - phpmyadmin
   relation_database:
     image: mysql:5
     ports:
@@ -19,5 +20,17 @@ services:
     restart: always
     environment:
         MYSQL_ROOT_PASSWORD: password
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+     - PMA_ARBITRARY=1
+    restart: always
+    ports:
+     - 8080:80
+    volumes:
+     - /sessions
+    links:
+     - relation_database
 volumes:
   logvolume01: {}

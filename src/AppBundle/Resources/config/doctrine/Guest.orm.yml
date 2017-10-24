@@ -1,0 +1,36 @@
+AppBundle\Entity\Guest:
+    type: entity
+    table: guest
+    repositoryClass: AppBundle\Repository\GuestRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        placement:
+            type: integer
+            nullable: true
+        transportBefore:
+            type: integer
+            nullable: true
+        transportAfter:
+            type: integer
+            nullable: true
+        accommodation:
+            type: integer
+            nullable: true
+        priceRange:
+            type: string
+            length: 255
+        side:
+            type: string
+            length: 255
+        nextDay:
+            type: integer
+            nullable: true
+    lifecycleCallbacks: {  }
