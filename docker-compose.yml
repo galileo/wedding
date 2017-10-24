@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  web:
+    image: galileo/php:5.6-apache-advanced-xdebug
+    ports:
+    - "80:80"
+    volumes:
+      - .:/var/www/html/
+      - logvolume01:/var/log
+    links:
+      - relation_database
+  relation_database:
+    image: mysql:5
+    ports:
+      - "3306:3306"
+    volumes:
+      - .:/backup
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: password
+volumes:
+  logvolume01: {}
