@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Guest</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ guest.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ guest.name }}</td>
+            </tr>
+            <tr>
+                <th>Placement</th>
+                <td>{{ guest.placement }}</td>
+            </tr>
+            <tr>
+                <th>Transportbefore</th>
+                <td>{{ guest.transportBefore }}</td>
+            </tr>
+            <tr>
+                <th>Transportafter</th>
+                <td>{{ guest.transportAfter }}</td>
+            </tr>
+            <tr>
+                <th>Accommodation</th>
+                <td>{{ guest.accommodation }}</td>
+            </tr>
+            <tr>
+                <th>Pricerange</th>
+                <td>{{ guest.priceRange }}</td>
+            </tr>
+            <tr>
+                <th>Side</th>
+                <td>{{ guest.side }}</td>
+            </tr>
+            <tr>
+                <th>Nextday</th>
+                <td>{{ guest.nextDay }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('guest_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('guest_edit', { 'id': guest.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
