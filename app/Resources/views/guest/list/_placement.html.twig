@@ -1,0 +1,13 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field %}
+    {% if object.placement == 1 %}
+        młodzi
+        <i class="fa fa-stop" style="color: #40cf22" aria-hidden="true"></i>
+    {% elseif object.placement == 2 %}
+        starsi
+        <i class="fa fa-stop" style="color: #2e65cf" aria-hidden="true"></i>
+    {% else %}
+        brak danych
+    {% endif %}
+{% endblock %}
