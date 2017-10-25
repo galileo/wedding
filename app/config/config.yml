@@ -7,7 +7,6 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: pl
-    price.main: 190
 
 framework:
     #esi: ~
@@ -39,7 +38,9 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
     globals:
-        mainPrice: "%price.main%"
+        price_currency: "%price.currency%"
+        price_person_basic: "%price.person.basic%"
+        price_person_beverages: "%price.person.beverages%"
 
 # Doctrine Configuration
 doctrine:

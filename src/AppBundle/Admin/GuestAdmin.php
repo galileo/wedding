@@ -25,15 +25,13 @@ class GuestAdmin extends AbstractAdmin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper->add('name', 'text')
-            ->add('placement', null, [
-                'label' => 'Stolik',
-            ])
-            ->add('transportBefore', null, ['label' => 'Transport z Bytomia'])
-            ->add('transportAfter', null, ['label' => 'Transport po weselu'])
-            ->add('accommodation', null, ['label' => 'Nocleg'])
-            ->add('priceRange', null, ['label' => 'Typ uczestinka'])
-            ->add('side', null, ['label' => 'Z strony'])
-            ->add('nextDay', null, ['label' => 'Poprawiny']);
+            ->add('placement')
+            ->add('transportBefore')
+            ->add('transportAfter')
+            ->add('accommodation')
+            ->add('priceRange')
+            ->add('side')
+            ->add('nextDay');
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
@@ -41,34 +39,31 @@ class GuestAdmin extends AbstractAdmin
         $datagridMapper
             ->add('name')
             ->add('placement', null, [
-                'label' => 'Stolik',
                 'template' => '::_placement.html.twig'
             ])
-            ->add('transportBefore', null, ['label' => 'Transport z Bytomia'])
-            ->add('transportAfter', null, ['label' => 'Transport po weselu'])
-            ->add('accommodation', null, ['label' => 'Nocleg'])
-            ->add('priceRange', null, ['label' => 'Typ uczestinka'])
-            ->add('side', null, ['label' => 'Z strony'])
-            ->add('nextDay', null, ['label' => 'Poprawiny']);
+            ->add('transportBefore')
+            ->add('transportAfter')
+            ->add('accommodation')
+            ->add('priceRange')
+            ->add('side')
+            ->add('nextDay');
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
             ->addIdentifier('id')
-            ->addIdentifier('name', null, ['label' => 'Gość'])
+            ->addIdentifier('name', null, ['label' => 'Guest'])
             ->add('placement', null, [
-                'label' => 'Stolik',
                 'template' => 'guest/list/_placement.html.twig'
             ])
-            ->add('transportBefore', 'boolean', ['label' => 'Transport z Bytomia'])
-            ->add('transportAfter', 'boolean', ['label' => 'Transport po weselu'])
-            ->add('accommodation', 'boolean', ['label' => 'Nocleg'])
+            ->add('transportBefore', 'boolean')
+            ->add('transportAfter', 'boolean')
+            ->add('accommodation', 'boolean')
             ->add('priceRange', null, [
-                'label' => 'Typ uczestinka',
                 'template' => 'guest/list/_priceRange.html.twig',
             ])
-            ->add('side', null, ['label' => 'Z strony'])
-            ->add('nextDay', 'boolean', ['label' => 'Poprawiny']);
+            ->add('side')
+            ->add('nextDay', 'boolean');
     }
 }

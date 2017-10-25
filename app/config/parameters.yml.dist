@@ -17,3 +17,8 @@ parameters:
 
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    # Prices that will be used for calculations
+    price.currency: zł # this is just a string representation will only displayed
+    price.person.basic: 500 # Put your basic price for a person on your wedding
+    price.person.beverages: 100 # Additional charge, for example: drink, cakes

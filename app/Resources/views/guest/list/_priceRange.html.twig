@@ -3,9 +3,9 @@
 {% block field %}
     <div>
         {% if object.priceRange == 1 %}
-            <span class="text-danger">Dorośli ({{ mainPrice }} zł) </span>
+            <span class="text-danger">Dorośli ({{ price_person_basic  }} {{ price_currency }}) </span>
         {% elseif object.priceRange == 2 %}
-            <span class="text-info">Dzieci ({{ mainPrice / 2 }} zł)</span>
+            <span class="text-info">Dzieci ({{ price_person_basic / 2 }} {{ price_currency }})</span>
         {% else %}
             Bezpłatnie
         {% endif %}
