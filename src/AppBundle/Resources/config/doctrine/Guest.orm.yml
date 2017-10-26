@@ -33,4 +33,7 @@ AppBundle\Entity\Guest:
         nextDay:
             type: integer
             nullable: true
+        paar:
+            type: integer
+            nullable: false
     lifecycleCallbacks: {  }

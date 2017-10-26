@@ -31,6 +31,7 @@ class GuestAdmin extends AbstractAdmin
             ->add('accommodation')
             ->add('priceRange')
             ->add('side')
+            ->add('paar')
             ->add('nextDay');
     }
 
@@ -46,6 +47,7 @@ class GuestAdmin extends AbstractAdmin
             ->add('accommodation')
             ->add('priceRange')
             ->add('side')
+            ->add('paar')
             ->add('nextDay');
     }
 
@@ -64,6 +66,7 @@ class GuestAdmin extends AbstractAdmin
                 'template' => 'guest/list/_priceRange.html.twig',
             ])
             ->add('side')
-            ->add('nextDay', 'boolean');
+            ->add('nextDay', 'boolean')
+            ->add('paar', 'boolean');
     }
 }
