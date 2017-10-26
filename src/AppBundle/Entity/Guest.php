@@ -52,6 +52,10 @@ class Guest
      */
     private $nextDay;
 
+    /**
+     * @var int
+     */
+    private $paar;
 
     /**
      * Get id
@@ -253,6 +257,22 @@ class Guest
     public function getNextDay()
     {
         return $this->nextDay;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPaar()
+    {
+        return $this->paar;
+    }
+
+    /**
+     * @param int $paar
+     */
+    public function setPaar($paar)
+    {
+        $this->paar = $paar;
     }
 }
 
