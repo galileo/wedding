@@ -1,0 +1,646 @@
+%YAML 1.1
+---
+# wedding.guest
+-
+  id: 1
+  name: "Małgorzta Juszczyk"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 2
+  name: "Kamil Ronewicz"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "kamil"
+-
+  id: 3
+  name: "Monika Juszczyk"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 4
+  name: "Andrzej Juszczyk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 5
+  name: "Aniela Ronewicz"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+-
+  id: 6
+  name: "Marian Kudlek"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+-
+  id: 7
+  name: "Marian Mikosch"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 8
+  name: "Karina Kuwaczka"
+  placement: 2
+  transport_before: 1
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "kamil"
+  next_day: 1
+-
+  id: 9
+  name: "Halina Pura"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 10
+  name: "Mieczyslaw Zajac"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 11
+  name: "Danuta Dulik"
+  placement: 2
+  transport_before: 1
+  transport_after: 1
+  price_range: 1
+  side: "kamil"
+-
+  id: 12
+  name: "Adam Bartosik"
+  placement: 2
+  transport_before: 1
+  transport_after: 1
+  price_range: 1
+  side: "kamil"
+-
+  id: 19
+  name: "Mateusz Juszczyk"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 20
+  name: "Kamila Juszczyk"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 21
+  name: "Dawid Juszczyk"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 2
+  side: "monika"
+  next_day: 1
+-
+  id: 22
+  name: "Arek Pura"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 23
+  name: "Agata Pura"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 24
+  name: "Kacper Pura"
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 25
+  name: "Osoba tow. Kacpra, Natalia ..."
+  placement: 1
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 26
+  name: "Danuta Juszczyk"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 27
+  name: "Jarosław Kicka"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 28
+  name: "Kordrian Kieliś"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 30
+  name: "Wioletta Kamińska"
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 31
+  name: "Mariusz Kamiński"
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 32
+  name: "Klaudia Kamiński"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 33
+  name: "Os. tow. Klaudii Kamińskiej"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 34
+  name: "Iwona Kocyjan"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 0
+-
+  id: 35
+  name: "Kszysztof Kocyjan"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 0
+-
+  id: 36
+  name: "Bożena Baradziej"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 37
+  name: "Jan Baradziej"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 38
+  name: "Katarzyna Majchrowicz"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 39
+  name: "Mariusz Majchrowicz"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 40
+  name: "Milena Majchrowicz"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 41
+  name: "Bożena Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 42
+  name: "Wiesław Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 43
+  name: "Agnieszka Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 44
+  name: "Sebastian Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 45
+  name: "Edyta Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 46
+  name: "Zbigniew Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 47
+  name: "Filip Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 48
+  name: "Władysława Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 49
+  name: "Franciszek Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 50
+  name: "Edyta Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 51
+  name: "Krzysztof Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 52
+  name: "Mateusz Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 53
+  name: "Maciek Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 54
+  name: "Piotr Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 55
+  name: "Os. tow. Piotr Popik"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 1
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 56
+  name: "Bożena Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 57
+  name: "Adam Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 58
+  name: "Łukasz Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 59
+  name: "Michał Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 60
+  name: "Lidia Wnuk"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+-
+  id: 61
+  name: "Zuzia (Lidia Michał)"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 2
+  side: "monika"
+-
+  id: 62
+  name: "Kacper (Lidia Michał)"
+  placement: 2
+  transport_before: 0
+  transport_after: 0
+  accommodation: 0
+  price_range: 2
+  side: "monika"
+-
+  id: 63
+  name: "Ala Czarny Marszałek"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 0
+-
+  id: 64
+  name: "Piotr Czarny Marszałek"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 0
+-
+  id: 65
+  name: "Ewa Podchajecka"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 66
+  name: "Zbyszek Michałkiewicz"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 67
+  name: "Jakub Michałkiewicz"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 2
+  side: "monika"
+  next_day: 1
+-
+  id: 68
+  name: "Mariola Kokosińska"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 69
+  name: "Marek Kokosińska"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 70
+  name: "Barbara Gołkowska"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 71
+  name: "Andrzej Gołkowska"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 72
+  name: "Ks. Jacek Zdrach"
+  placement: 2
+  transport_before: 0
+  transport_after: 1
+  accommodation: 0
+  price_range: 1
+  side: "monika"
+  next_day: 1
+-
+  id: 73
+  name: "Marcin Sikora"
+  placement: 1
+  transport_before: 0
+  transport_after: 1
+  price_range: 1
+  side: "monika"
+...
