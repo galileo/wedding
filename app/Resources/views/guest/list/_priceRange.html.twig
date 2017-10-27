@@ -3,11 +3,25 @@
 {% block field %}
     <div>
         {% if object.priceRange == 1 %}
-            <span class="text-danger">Dorośli ({{ price_person_basic  }} {{ price_currency }}) </span>
+            <span class="text-warning">
+                {{ 'Adult'|trans }}
+                <span class="label label-warning">{{ price_person_basic }} {{ price_currency }}</span>
+            </span>
         {% elseif object.priceRange == 2 %}
-            <span class="text-info">Dzieci ({{ price_person_basic / 2 }} {{ price_currency }})</span>
+            <span class="text-info">
+                {{ 'Kid'|trans }}
+                <span class="label label-info">{{ price_person_basic / 2 }} {{ price_currency }}</span>
+            </span>
+        {% elseif object.priceRange == 3 %}
+            {{ 'Kid'|trans }}
+            <span class="label label-success">{{ 'Free'|trans }}</span>
+        {% elseif object.priceRange == 4 %}
+            {{ 'Support'|trans }} <span class="label label-primary">{{ 'No Info'|trans }}</span>
+        {% elseif object.priceRange == 5 %}
+            {{ 'Friend'|trans }} {{ 'Not Applicable'|trans }}
         {% else %}
-            Bezpłatnie
+            <span class="label label-danger">{{ 'Not Defined'|trans }}</span>
+            <span class="label label-danger">{{ 'Not Defined'|trans }}</span>
         {% endif %}
     </div>
 {% endblock %}

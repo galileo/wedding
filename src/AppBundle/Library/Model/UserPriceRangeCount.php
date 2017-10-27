@@ -7,12 +7,24 @@ use AppBundle\Entity\Guest;
 class UserPriceRangeCount
 {
     const ADULT = 1;
-    const KID = 2;
-    const BABY = 3;
+    const YOUTH = 2;
+    const KID = 3;
+    const SUPPORT = 4;
+    const FRIEND = 5;
+
+    static $names = [
+        self::ADULT => 'Adult',
+        self::YOUTH => 'Youth',
+        self::KID => 'Kid',
+        self::SUPPORT => 'Support',
+        self::FRIEND => 'Friend',
+    ];
 
     private $adults;
     private $kids;
     private $babies;
+    private $support;
+    private $friends;
 
     /**
      * @param Guest[] $guests
@@ -23,22 +35,32 @@ class UserPriceRangeCount
     {
         $stats = [
             self::ADULT => [],
+            self::YOUTH => [],
             self::KID => [],
-            self::BABY => [],
+            self::SUPPORT => [],
+            self::FRIEND => [],
         ];
 
         foreach ($guests as $guest) {
             $stats[$guest->getPriceRange()][] = $guest;
         }
 
-        return new UserPriceRangeCount($stats[self::ADULT], $stats[self::KID], $stats[self::BABY]);
+        return new UserPriceRangeCount(
+            $stats[self::ADULT],
+            $stats[self::YOUTH],
+            $stats[self::KID],
+            $stats[self::SUPPORT],
+            $stats[self::FRIEND]
+        );
     }
 
-    public function __construct($adults, $kids, $babies)
+    public function __construct($adults, $kids, $babies, $support, $friends)
     {
         $this->adults = $adults;
         $this->kids = $kids;
         $this->babies = $babies;
+        $this->support = $support;
+        $this->friends = $friends;
     }
 
     public function countAdults()
@@ -54,5 +76,15 @@ class UserPriceRangeCount
     public function countBabies()
     {
         return count($this->babies);
+    }
+
+    public function countSupport()
+    {
+        return count($this->support);
+    }
+
+    public function countFriends()
+    {
+        return count($this->friends);
     }
 }
