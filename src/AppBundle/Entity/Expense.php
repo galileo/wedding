@@ -72,7 +72,7 @@ class Expense
 
     public function paid()
     {
-        return array_reduce($this->deposits, function ($paid, Deposit $deposit) {
+        return array_reduce($this->deposits->toArray(), function ($paid, Deposit $deposit) {
             return $paid + $deposit->amount();
         }, 0);
     }

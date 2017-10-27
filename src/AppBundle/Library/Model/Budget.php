@@ -11,9 +11,13 @@ class Budget
 {
     private $expenseList;
 
-    public function __construct()
+    public function __construct($expenses = [])
     {
         $this->expenseList = new ArrayCollection();
+
+        foreach ($expenses as $expense) {
+            $this->register($expense);
+        }
     }
 
     public function register(Expense $expense)

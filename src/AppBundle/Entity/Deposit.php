@@ -56,7 +56,7 @@ class Deposit
 
     public function amount()
     {
-        return $this->amount->amount();
+        return $this->amount;
     }
 
     public function message()
