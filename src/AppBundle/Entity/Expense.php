@@ -50,6 +50,11 @@ class Expense
         return new Expense(ExpenseId::generate(), $name, $amount);
     }
 
+    public function __toString()
+    {
+        return $this->name();
+    }
+
     public function id()
     {
         return $this->id;
@@ -85,5 +90,10 @@ class Expense
     public function name()
     {
         return $this->name;
+    }
+
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
     }
 }

@@ -19,3 +19,4 @@ AppBundle\Entity\Expense:
             targetEntity: AppBundle\Entity\Deposit
             mappedBy: expense
             cascade: [ all ]
+            fetch: EAGER
