@@ -57,6 +57,11 @@ class Guest
      */
     private $paar;
 
+    public function __toString()
+    {
+        return (string)$this->name;
+    }
+
     /**
      * Get id
      *
@@ -275,9 +280,20 @@ class Guest
         $this->paar = $paar;
     }
 
-    public function __toString()
+    /**
+     * @return int
+     */
+    public function getWeddingGuest()
     {
-        return $this->name;
+        return $this->weddingGuest;
+    }
+
+    /**
+     * @param int $weddingGuest
+     */
+    public function setWeddingGuest($weddingGuest)
+    {
+        $this->weddingGuest = $weddingGuest;
     }
 }
 

@@ -3,6 +3,7 @@
 namespace AppBundle\Admin;
 
 use AppBundle\Library\Infrastructure\Sonata\Helper\DatagridMapperHelper;
+use AppBundle\Library\Model\UserPriceRangeCount;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -46,7 +47,7 @@ class GuestAdmin extends AbstractAdmin
             ->add('transportBefore')
             ->add('transportAfter')
             ->add('accommodation')
-            ->add('priceRange')
+            ->addChoices('priceRange', array_flip(UserPriceRangeCount::$names))
             ->addChoices('side', ['Kamil' => 'kamil', 'Monika' => 'monika'])
             ->add('paar')
             ->addChoices('nextDay', ['Yes' => 1, 'No' => 0, 'Not Decided' => 3]);
