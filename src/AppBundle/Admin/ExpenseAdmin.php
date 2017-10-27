@@ -28,9 +28,9 @@ class ExpenseAdmin extends AbstractAdmin
             ->add('amount');
     }
 
-    protected function configureDatagridFilters(DatagridMapper $datagridMapper)
+    protected function configureDatagridFilters(DatagridMapper $mapper)
     {
-        $datagridMapper
+        $mapper
             ->add('name')
             ->add('deposits')
             ->add('amount');

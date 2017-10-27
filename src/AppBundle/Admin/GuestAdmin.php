@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Library\Infrastructure\Sonata\Helper\DatagridMapperHelper;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -35,20 +36,20 @@ class GuestAdmin extends AbstractAdmin
             ->add('nextDay');
     }
 
-    protected function configureDatagridFilters(DatagridMapper $datagridMapper)
+    protected function configureDatagridFilters(DatagridMapper $mapper)
     {
-        $datagridMapper
+        $helper = new DatagridMapperHelper($mapper);
+
+        $helper
             ->add('name')
-            ->add('placement', null, [
-                'template' => '::_placement.html.twig'
-            ])
+            ->addChoices('placement', ['Young' => 1, 'Young Parents' => 2, 'Not Decided' => 3])
             ->add('transportBefore')
             ->add('transportAfter')
             ->add('accommodation')
             ->add('priceRange')
-            ->add('side')
+            ->addChoices('side', ['Kamil' => 'kamil', 'Monika' => 'monika'])
             ->add('paar')
-            ->add('nextDay');
+            ->addChoices('nextDay', ['Yes' => 1, 'No' => 0, 'Not Decided' => 3]);
     }
 
     protected function configureListFields(ListMapper $listMapper)
@@ -66,7 +67,7 @@ class GuestAdmin extends AbstractAdmin
                 'template' => 'guest/list/_priceRange.html.twig',
             ])
             ->add('side')
-            ->add('nextDay', 'boolean')
+            ->add('nextDay', null, ['template' => 'guest/list/_boolean.html.twig'])
             ->add('paar', 'boolean');
     }
 }
