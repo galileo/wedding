@@ -49,6 +49,11 @@ class Deposit
         return $deposit;
     }
 
+    public function __toString()
+    {
+        return (string)$this->amount;
+    }
+
     public function id()
     {
         return $this->id;

@@ -39,5 +39,12 @@ services:
         class: AppBundle\Admin\GuestAdmin
         arguments: [~, AppBundle\Entity\Guest, ~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Guest }
+            - { name: sonata.admin, manager_type: orm, label: Guests }
+        public: true
+
+    budget.expense:
+        class: AppBundle\Admin\ExpenseAdmin
+        arguments: [~, AppBundle\Entity\Expense, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Expenses }
         public: true
