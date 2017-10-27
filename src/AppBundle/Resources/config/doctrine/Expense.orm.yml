@@ -1,0 +1,21 @@
+AppBundle\Entity\Expense:
+    type: entity
+    table: expense
+    id:
+        id:
+            type: guid
+            id: true
+            generator:
+                strategy: NONE
+    fields:
+        name:
+            type: string
+            length: 255
+        amount:
+            type: float
+
+    oneToMany:
+        deposits:
+            targetEntity: AppBundle\Entity\Deposit
+            mappedBy: expense
+            cascade: [ all ]
