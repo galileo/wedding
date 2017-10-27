@@ -1,0 +1,11 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+
+{% block field %}
+    {% if value == 1 %}
+        <span class="label label-success">{{ 'Yes'|trans }}</span>
+    {% elseif value == 0 %}
+        <span class="label label-error">{{ 'No'|trans }}</span>
+    {% else %}
+        <span class="label label-info">{{ 'Not Decided'|trans }}</span>
+    {% endif %}
+{% endblock %}

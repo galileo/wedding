@@ -274,5 +274,10 @@ class Guest
     {
         $this->paar = $paar;
     }
+
+    public function __toString()
+    {
+        return $this->name;
+    }
 }
 

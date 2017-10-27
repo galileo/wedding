@@ -2,12 +2,12 @@
 
 {% block field %}
     {% if object.placement == 1 %}
-        młodzi
+        {{ 'Young'|trans }}
         <i class="fa fa-stop" style="color: #40cf22" aria-hidden="true"></i>
     {% elseif object.placement == 2 %}
-        starsi
+        {{ 'Young Parents'|trans }}
         <i class="fa fa-stop" style="color: #2e65cf" aria-hidden="true"></i>
     {% else %}
-        brak danych
+        {{ 'Not Decided'|trans }}
     {% endif %}
 {% endblock %}
