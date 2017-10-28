@@ -20,5 +20,12 @@ parameters:
 
     # Prices that will be used for calculations
     price.currency: zł # this is just a string representation will only displayed
-    price.person.basic: 500 # Put your basic price for a person on your wedding
-    price.person.beverages: 100 # Additional charge, for example: drink, cakes
+    price.person.adult.basic: 500 # Put your basic price for a person on your wedding
+    price.person.adult.beverages: 100 # Additional charge, for example: drink, cakes for adult
+    price.person.kid.basic: 250 # Put the basic price for kid on your wedding
+    price.person.kid.beverages: 50 # Additional charge, per kid for: drinks, cakes
+    price.person.support.basic: 500 # Price for person from support
+    price.person.babies.basic: 0 # Put the basic price for smaller kids
+    price.pair.leaving_gift: 50 # Price for additional gift for guest on leaving
+    price.additional.fountain: 1000 # We added additional wine fountain on the wedding
+    price.breakfast.price: 1000 # Price for breakfast in the restaurant

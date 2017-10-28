@@ -11,6 +11,7 @@ class UserPriceRangeCount
     const KID = 3;
     const SUPPORT = 4;
     const FRIEND = 5;
+    const PAIR = 'pair';
 
     static $names = [
         self::ADULT => 'Adult',
@@ -25,6 +26,7 @@ class UserPriceRangeCount
     private $babies;
     private $support;
     private $friends;
+    private $pairs;
 
     /**
      * @param Guest[] $guests
@@ -39,10 +41,15 @@ class UserPriceRangeCount
             self::KID => [],
             self::SUPPORT => [],
             self::FRIEND => [],
+            self::PAIR => [],
         ];
 
+        /** @var Guest $guest */
         foreach ($guests as $guest) {
             $stats[$guest->getPriceRange()][] = $guest;
+            if ($guest->getPaar()) {
+                $stats[self::PAIR][] = $guest;
+            }
         }
 
         return new UserPriceRangeCount(
@@ -50,17 +57,19 @@ class UserPriceRangeCount
             $stats[self::YOUTH],
             $stats[self::KID],
             $stats[self::SUPPORT],
-            $stats[self::FRIEND]
+            $stats[self::FRIEND],
+            $stats[self::PAIR]
         );
     }
 
-    public function __construct($adults, $kids, $babies, $support, $friends)
+    public function __construct($adults, $kids, $babies, $support, $friends, $pairs)
     {
         $this->adults = $adults;
         $this->kids = $kids;
         $this->babies = $babies;
         $this->support = $support;
         $this->friends = $friends;
+        $this->pairs = $pairs;
     }
 
     public function countAdults()
@@ -86,5 +95,15 @@ class UserPriceRangeCount
     public function countFriends()
     {
         return count($this->friends);
+    }
+
+    public function countPairs()
+    {
+        return count($this->pairs);
+    }
+
+    public function countGuests()
+    {
+        return $this->countAdults() + $this->countKids() + $this->countBabies();
     }
 }
