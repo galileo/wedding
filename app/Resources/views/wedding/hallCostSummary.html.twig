@@ -1,0 +1,39 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block sonata_page_content %}
+    <div id="wrapper">
+        <div id="container">
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">{{ 'Wedding Hall Costs'|trans }}</h3>
+                            </div>
+                            <div class="box-body">
+                                <table class="table table-hover">
+                                    <tbody>
+                                    {% for name, cost in costs.view %}
+                                        <tr>
+                                            <th class="sonata-ba-list-label" width="70%">{{ name|trans }}:</th>
+                                            <td>{{ cost.count }}</td>
+                                            <td>x</td>
+                                            <td>{{ cost.price }} {{ price_currency }}</td>
+                                            <td>=</td>
+                                            <td class="text-left">{{ cost.total }} {{ price_currency }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                    <tr>
+                                        <th colspan="5" class="sonata-ba-list-label">{{ 'Summary'|trans }}</th>
+                                        <td class="text-left">{{ costs.all }} {{ price_currency }}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}

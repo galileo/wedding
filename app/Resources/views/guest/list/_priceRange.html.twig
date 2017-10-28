@@ -6,11 +6,16 @@
             <span class="text-warning">
                 {{ 'Adult'|trans }}
                 <span class="label label-warning">{{ price_person_basic }} {{ price_currency }}</span>
+                <span class="label label-warning">{{ price_person_beverages }} {{ price_currency }}</span>
+                {% if object.paar == 1 %}
+                    <span class="label label-warning">{{ 17 }} {{ price_currency }}</span>
+                {% endif %}
             </span>
         {% elseif object.priceRange == 2 %}
             <span class="text-info">
                 {{ 'Kid'|trans }}
-                <span class="label label-info">{{ price_person_basic / 2 }} {{ price_currency }}</span>
+                <span class="label label-info">{{ price_kid_basic }} {{ price_currency }}</span>
+                <span class="label label-info">{{ price_kid_beverages }} {{ price_currency }}</span>
             </span>
         {% elseif object.priceRange == 3 %}
             {{ 'Kid'|trans }}

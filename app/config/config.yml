@@ -39,8 +39,10 @@ twig:
     strict_variables: '%kernel.debug%'
     globals:
         price_currency: "%price.currency%"
-        price_person_basic: "%price.person.basic%"
-        price_person_beverages: "%price.person.beverages%"
+        price_person_basic: "%price.person.adult.basic%"
+        price_kid_basic: "%price.person.kid.basic%"
+        price_person_beverages: "%price.person.adult.beverages%"
+        price_kid_beverages: "%price.person.kid.beverages%"
 
 # Doctrine Configuration
 doctrine:
@@ -82,8 +84,14 @@ sonata_block:
 sonata_admin:
     dashboard:
         groups:
-          default: ~
-          summary:
+            default:
+                label: Default
+                label_catalogue: messages
+            summary:
+                label: Summary
+                label_catalogue: messages
                 items:
-                    - route:        wedding_budget
+                    - route:        wedding.budget
                       label:        Budget
+                    - route:        wedding.hall_summary
+                      label:        Wedding Hall Costs

@@ -1,0 +1,74 @@
+{% extends 'SonataAdminBundle::standard_layout.html.twig' %}
+
+{% block top_bar_after_nav %}
+    <li>
+        <a href="{{ path('homepage') }}">
+            {{ 'Budget'|trans }}
+        </a>
+    </li>
+{% endblock %}
+
+{% block sonata_page_content %}
+
+    <div id="wrapper">
+        <div id="container">
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box">
+                            <div class="box-header">
+                                <h3 class="box-title">{{ 'Wedding Hall Costs'|trans }}</h3>
+                            </div>
+                            <div class="box-body">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr class="sonata-ba-list-field-header">
+                                        <th class="sonata-ba-list-field-header">
+                                            Nazwa
+                                        </th>
+                                        <th>
+                                            <strong>Zapłacono</strong>
+                                        </th>
+                                        <th>
+                                            <strong>Do zapłaty</strong>
+                                        </th>
+                                        <th class="sonata-ba-list-field-header">
+                                            <strong>Razem</strong>
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for expense in budget.expenses %}
+                                        <tr>
+                                            <td>
+                                                {{ expense.name }}
+                                            </td>
+                                            <td>
+                                                {{ expense.paid }} {{ price_currency }}
+                                            </td>
+                                            <td>
+                                                {{ expense.leftToPay }} {{ price_currency }}
+                                            </td>
+                                            <td>
+                                                {{ expense.amount }} {{ price_currency }}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th>{{ 'Summary'|trans }}</th>
+                                        <th>{{ budget.total }} {{ price_currency }}</th>
+                                        <th>{{ budget.paid }} {{ price_currency }}</th>
+                                        <th>{{ budget.leftToPay }} {{ price_currency }}</th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock %}
