@@ -29,6 +29,16 @@ class Expense
      */
     private $deposits;
 
+    /**
+     * @var \DateTime
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     */
+    private $updatedAt;
+
     public function __construct(ExpenseId $expenseId, $name, Amount $amount)
     {
         $this->id = $expenseId->id();
