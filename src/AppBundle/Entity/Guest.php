@@ -57,6 +57,16 @@ class Guest
      */
     private $paar;
 
+    /**
+     * @var \DateTime
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     */
+    private $updatedAt;
+
     public function __toString()
     {
         return (string)$this->name;

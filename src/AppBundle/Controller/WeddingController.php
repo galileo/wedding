@@ -2,6 +2,9 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Library\Infrastructure\GalileoSettingBundle\CostSettingGalileoBuilder;
+use AppBundle\Library\Infrastructure\Symfony\CostSettings;
+use AppBundle\Library\Infrastructure\Symfony\CostSettingSymfonyBuilder;
 use AppBundle\Library\Model\Budget;
 use AppBundle\Library\Model\CostSummary;
 use AppBundle\Library\Model\UserPriceRangeCount;
@@ -34,16 +37,13 @@ class WeddingController extends Controller
 
         $userCount = UserPriceRangeCount::fromArray($guests);
 
+        $defaults = new CostSettingSymfonyBuilder($this->container);
+        $costSettingsFactory = new CostSettingGalileoBuilder($this->get('galileo.setting.setting'));
+
+        $costSettings = $costSettingsFactory->buildWithDefaults($defaults->build());
+
         // replace this example code with whatever you need
-        $costSummary = CostSummary::buildFrom($userCount,
-            $this->getParameter('price.person.adult.basic'),
-            $this->getParameter('price.person.kid.basic'),
-            $this->getParameter('price.person.babies.basic'),
-            $this->getParameter('price.person.support.basic'),
-            $this->getParameter('price.person.adult.beverages'),
-            $this->getParameter('price.person.kid.beverages'),
-            $this->getParameter('price.pair.leaving_gift')
-        );
+        $costSummary = CostSummary::buildFrom($userCount, $costSettings);
 
         $costSummary->register('Fountain', 1, 250);
         $costSummary->register('Breakfast', 9, 20);

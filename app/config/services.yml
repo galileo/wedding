@@ -48,3 +48,17 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, label: Expenses }
         public: true
+
+    budget.deposit:
+        class: AppBundle\Admin\DepositAdmin
+        arguments: [~, AppBundle\Entity\Deposit, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Deposit }
+        public: true
+
+    galileo.settings.admin:
+        class: AppBundle\Admin\SettingAdmin
+        arguments: [~, Galileo\SettingBundle\Entity\Setting, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Settings }
+        public: true

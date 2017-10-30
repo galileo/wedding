@@ -36,4 +36,18 @@ AppBundle\Entity\Guest:
         paar:
             type: integer
             nullable: false
+        createdAt:
+            type: datetime
+            options:
+                default: 0
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            options:
+                default: 0
+            gedmo:
+                timestampable:
+                    on: update
     lifecycleCallbacks: {  }

@@ -10,6 +10,20 @@ AppBundle\Entity\Deposit:
     fields:
         amount:
             type: float
+        createdAt:
+            type: datetime
+            options:
+                default: 0
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            options:
+                default: 0
+            gedmo:
+                timestampable:
+                    on: update
 
     manyToOne:
         expense:

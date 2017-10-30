@@ -4,6 +4,7 @@ namespace AppBundle\Entity;
 
 use AppBundle\Library\Model\Amount;
 use AppBundle\Library\Model\DepositId;
+use DateTime;
 
 class Deposit
 {
@@ -26,6 +27,16 @@ class Deposit
      * @var Expense
      */
     private $expense;
+
+    /**
+     * @var DateTime
+     */
+    private $createdAt;
+
+    /**
+     * @var DateTime
+     */
+    private $updatedAt;
 
     public function __construct(DepositId $depositId, Expense $expense, Amount $amount, $message = '')
     {
@@ -67,5 +78,58 @@ class Deposit
     public function message()
     {
         return $this->message;
+    }
+
+    public function expense()
+    {
+        return $this->expense;
+    }
+
+    /**
+     * @param string $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @param Amount $amount
+     */
+    public function setAmount($amount)
+    {
+        $this->amount = $amount;
+    }
+
+    /**
+     * @param string $message
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+    }
+
+    /**
+     * @param Expense $expense
+     */
+    public function setExpense($expense)
+    {
+        $this->expense = $expense;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function createdAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function updatedAt()
+    {
+        return $this->updatedAt;
     }
 }
