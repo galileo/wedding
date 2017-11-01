@@ -60,6 +60,11 @@ class Expense
         return new Expense(ExpenseId::generate(), $name, $amount);
     }
 
+    public static function provideEmpty()
+    {
+        return self::provideNew('New', new Amount(0));
+    }
+
     public function __toString()
     {
         return $this->name();

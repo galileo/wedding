@@ -2,6 +2,7 @@
 
 namespace AppBundle\Admin;
 
+use AppBundle\Entity\Deposit;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -9,6 +10,11 @@ use Sonata\AdminBundle\Form\FormMapper;
 
 class DepositAdmin extends AbstractAdmin
 {
+    public function getNewInstance()
+    {
+        return Deposit::provideEmpty();
+    }
+
     function getFormBuilder()
     {
         $this->formOptions['data_class'] = $this->getClass();

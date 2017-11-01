@@ -38,7 +38,7 @@ class Deposit
      */
     private $updatedAt;
 
-    public function __construct(DepositId $depositId, Expense $expense, Amount $amount, $message = '')
+    public function __construct(DepositId $depositId, Expense $expense = null, Amount $amount, $message = '')
     {
         $this->id = $depositId->id();
         $this->expense = $expense;
@@ -58,6 +58,11 @@ class Deposit
         $expense->deposit($deposit);;
 
         return $deposit;
+    }
+
+    public static function provideEmpty()
+    {
+        return new Deposit(DepositId::generate(), null, new Amount(0), 'Default');
     }
 
     public function __toString()
