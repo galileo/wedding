@@ -1,58 +1,18 @@
-version: '3'
+version: '2'
 
 services:
-    php:
-        build:
-            context: ./.docker/php-fpm
-            args:
-                TIMEZONE: ${TIMEZONE}
-        volumes:
-            - symfonyLogs:/var/www/symfony/app/logs
     nginx:
-        build: .docker/nginx
+        build: nginx
         ports:
             - 80:80
-        depends_on:
-            - php
         volumes:
-            - nginxLogs:/var/log/nginx
-    relation_database:
-        image: mysql:5
-        ports:
-          - "3306:3306"
-        volumes:
-          - dbDataVolume:/var/lib/mysql
-        restart: always
-        environment:
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: ${MYSQL_DATABASE}
-            MYSQL_USER: ${MYSQL_USER}
-            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            - ./logs/nginx/:/var/log/nginx
     elk:
         image: willdurand/elk
         ports:
             - 81:80
         volumes:
-            - ./.docker/elk/logstash:/etc/logstash
-            - ./.docker/elk/logstash/patterns:/opt/logstash/patterns
-        depends_on:
-            - php
+            - ./elk/logstash:/etc/logstash
+            - ./elk/logstash/patterns:/opt/logstash/patterns
+        volumes_from:
             - nginx
-    phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        container_name: phpmyadmin
-        environment:
-           - PMA_ARBITRARY=1
-        restart: always
-        ports:
-           - 8080:80
-        volumes:
-           - /sessions
-        links:
-           - relation_database
-volumes:
-    symfonyLogs: {}
-    dbDataVolume: {}
-    nginxLogs: {}
-    logstash: {}
-    logstashPatterns: {}
