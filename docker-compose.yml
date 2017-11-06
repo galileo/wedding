@@ -1,36 +1,38 @@
-version: '3'
+version: '2'
 
 services:
-  web:
-    image: galileo/php:5.6-apache-advanced-xdebug
-    ports:
-    - "80:80"
-    volumes:
-      - .:/var/www/html/
-      - logvolume01:/var/log
-    links:
-      - relation_database
-      - phpmyadmin
-  relation_database:
-    image: mysql:5
-    ports:
-      - "3306:3306"
-    volumes:
-      - .:/backup
-    restart: always
-    environment:
-        MYSQL_ROOT_PASSWORD: password
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmyadmin
-    environment:
-     - PMA_ARBITRARY=1
-    restart: always
-    ports:
-     - 8080:80
-    volumes:
-     - /sessions
-    links:
-     - relation_database
-volumes:
-  logvolume01: {}
+    db:
+        image: mysql
+        volumes:
+            - "./.data/db:/var/lib/mysql"
+        environment:
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    php:
+        build:
+            context: php7-fpm
+            args:
+                TIMEZONE: ${TIMEZONE}
+        volumes:
+            - ./:/var/www/symfony
+            - ./logs/symfony:/var/www/symfony/var/logs
+    nginx:
+        build: nginx
+        ports:
+            - 80:80
+        volumes_from:
+            - php
+        volumes:
+            - ./logs/nginx/:/var/log/nginx
+    elk:
+        image: willdurand/elk
+        ports:
+            - 81:80
+        volumes:
+            - ./elk/logstash:/etc/logstash
+            - ./elk/logstash/patterns:/opt/logstash/patterns
+        volumes_from:
+            - php
+            - nginx
